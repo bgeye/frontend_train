@@ -8,7 +8,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 #bdy {
   background: gainsboro;
-  color: red; }
+  overflow: hidden; }
 
 .grid {
   position: absolute;
@@ -19,7 +19,8 @@
   width: 3260px;
   margin-left: -1630px;
   background: gainsboro;
-  z-index: -1; }
+  z-index: -1;
+  overflow: hidden; }
 
 .vertical {
   width: 100%;
@@ -84,9 +85,10 @@ h3 {
   font-weight: bold; }
 
 .logo {
-  float: right;
+  float: left;
   width: 161px;
-  height: 161px; }
+  height: 161px;
+  background: #FF6347; }
 
 .container {
   width: 978px;
@@ -97,27 +99,29 @@ h3 {
     display: table;
     clear: both; }
 
-.head {
-  background: tomato; }
-  .head__nav {
-    float: left; }
-  .head__main::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .head::after {
-    content: "";
-    display: table;
-    clear: both; }
+.head__nav {
+  float: left;
+  width: 815px; }
+
+.head__main::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.head::after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .main {
-  width: 644px;
+  width: 487px;
   background: rgba(255, 255, 255, 0.5);
-  float: left; }
+  float: left;
+  padding: 5px; }
   .main__item {
     width: 161px;
     height: 161px;
-    background: #bc2a0a;
+    background: #FF6347;
     position: relative;
     float: left;
     margin-right: 2px;
@@ -126,7 +130,7 @@ h3 {
     .main__item:hover {
       background: #ffffff; }
       .main__item:hover > a {
-        color: #bc2a0a;
+        color: #FF6347;
         /*transform:rotate(-90deg);*/ }
     .main__item a {
       color: #ffffff;
@@ -139,8 +143,58 @@ h3 {
       padding: 5px; }
 
 .footer {
-  float: right;
+  float: left;
   width: 161px;
+  margin-left: 327px;
   background: #ffffff; }
   .footer span {
     /*font-size:1.2rem;*/ }
+  .footer__description, .footer__address {
+    height: 163px;
+    padding: 5px; }
+  .footer__address {
+    position: relative; }
+  .footer__nav {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  .footer li {
+    float: left; }
+
+.box {
+  display: none;
+  width: 20%;
+  height: 100%; }
+
+@media (max-width: 978px) {
+  .box {
+    display: block; }
+  .grid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    height: 100%;
+    width: 100%;
+    margin-left: 0; }
+  .vertical {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .horizontal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .vc__line {
+    width: 100%;
+    height: auto;
+    border-right: 1px solid white;
+    float: left; }
+  .hz__line {
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid white; } }
