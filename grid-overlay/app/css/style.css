@@ -1,0 +1,144 @@
+/*
+           name: z-bau.ch
+    description: description
+         author: mario knecht
+           date: 2018mmdd
+*/
+/*GRID TESTING*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+#bdy {
+  background-color: gainsboro; }
+
+.grid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  height: 2000px;
+  width: 3260px;
+  background-color: gainsboro; }
+
+.vertical {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.horizontal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.vc__line {
+  width: 161px;
+  height: 100%;
+  border-right: 1px solid white;
+  float: left; }
+
+.hz__line {
+  width: 100%;
+  height: 161px;
+  border-bottom: 1px solid white; }
+
+/*GRID TESTING*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-size: 1rem; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  font-size: 1.1rem;
+  font-weight: bold; }
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: bold; }
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+.background-image {
+  background-image: url("../img/maschine.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
+
+.logo {
+  float: right;
+  width: 161px;
+  height: 161px; }
+
+.container {
+  width: 978px;
+  margin: 0 auto; }
+
+.head {
+  background-color: tomato; }
+  .head__nav {
+    float: left; }
+  .head__main::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .head::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.main {
+  width: 644px;
+  background-color: rgba(255, 255, 255, 0.5);
+  float: left; }
+  .main__item {
+    width: 161px;
+    height: 161px;
+    background-color: #bc2a0a;
+    position: relative;
+    float: left;
+    margin-right: 2px; }
+    .main__item:hover {
+      background-color: #ffffff; }
+      .main__item:hover > a {
+        color: #bc2a0a;
+        /*transform:rotate(-90deg);*/ }
+    .main__item a {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      cursor: pointer;
+      padding: 5px; }
+
+.footer {
+  float: right;
+  width: 161px;
+  background-color: #ffffff; }
+  .footer span {
+    /*font-size:1.2rem;*/ }
