@@ -8,17 +8,20 @@
 
 /*GRID TESTING*/
 #bdy{
-    background-color: gainsboro;
+    background: gainsboro;
+    color:red;
 }
 
 .grid{
     position:absolute;
-    left:0;
+    left:50%;
     top:0;
     color:white;
     height:2000px;
     width:3260px;
-    background-color: gainsboro;
+    margin-left: -1630px;
+    background: gainsboro;
+    z-index: -1;
 
 }
 
@@ -39,7 +42,7 @@
 }
 
 .vc__line{
-    width:161px;
+    width:163px;
     height:100%;
     border-right:1px solid white;
     float:left;
@@ -47,7 +50,7 @@
 
 .hz__line{
     width:100%;
-    height:161px;
+    height:163px;
     border-bottom:1px solid white;
 }
 
@@ -80,6 +83,10 @@ body{
 
 }
 
+ul{
+    list-style: none;
+}
+
 img{
     width:100%;
     height:100%;
@@ -104,17 +111,17 @@ h3{
     font-weight: bold;
 }
 
-.background-image{
-    background-image: url('../img/maschine.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    position:absolute;
-    height:100%;
-    width:100%;
-    z-index:-1;
-}
+//.background-image{
+//    background-image: url('../img/maschine.jpg');
+//    background-size: cover;
+//    background-position: center center;
+//    background-repeat:no-repeat;
+//    background-attachment:fixed;
+//    position:absolute;
+//    height:100%;
+//    width:100%;
+//    z-index:-1;
+//}
 
 .logo{
 
@@ -127,10 +134,16 @@ h3{
 .container{
     width:978px;
     margin:0 auto;
+    z-index:1;
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 .head{
-    background-color: tomato;
+    background: tomato;
     &__nav{
         float:left;
     }
@@ -152,17 +165,18 @@ h3{
 .main{
 
     width:644px;
-    background-color: $white_transp;
+    background: $white_transp;
     float:left;
     &__item{
         width:161px;
         height:161px;
-        background-color: $red;
+        background: $red;
         position:relative;
         float:left;
         margin-right:2px;
+        transition: background 300ms linear;
         &:hover{
-            background-color: $white;
+            background: $white;
 
             & > a{
                 color: $red;
@@ -181,12 +195,13 @@ h3{
             padding:5px;
         }
     }
+
 }
 
 .footer{
     float:right;
     width:161px;
-    background-color: $white;
+    background: $white;
     & span{
         /*font-size:1.2rem;*/
     }

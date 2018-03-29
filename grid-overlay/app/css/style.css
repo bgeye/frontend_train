@@ -7,16 +7,19 @@
 /*GRID TESTING*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 #bdy {
-  background-color: gainsboro; }
+  background: gainsboro;
+  color: red; }
 
 .grid {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
   color: white;
   height: 2000px;
   width: 3260px;
-  background-color: gainsboro; }
+  margin-left: -1630px;
+  background: gainsboro;
+  z-index: -1; }
 
 .vertical {
   width: 100%;
@@ -33,14 +36,14 @@
   left: 0; }
 
 .vc__line {
-  width: 161px;
+  width: 163px;
   height: 100%;
   border-right: 1px solid white;
   float: left; }
 
 .hz__line {
   width: 100%;
-  height: 161px;
+  height: 163px;
   border-bottom: 1px solid white; }
 
 /*GRID TESTING*/
@@ -57,6 +60,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
   font-size: 1rem; }
+
+ul {
+  list-style: none; }
 
 img {
   width: 100%;
@@ -77,17 +83,6 @@ h3 {
   font-size: 1.2rem;
   font-weight: bold; }
 
-.background-image {
-  background-image: url("../img/maschine.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -1; }
-
 .logo {
   float: right;
   width: 161px;
@@ -95,10 +90,15 @@ h3 {
 
 .container {
   width: 978px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 1; }
+  .container::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .head {
-  background-color: tomato; }
+  background: tomato; }
   .head__nav {
     float: left; }
   .head__main::after {
@@ -112,17 +112,19 @@ h3 {
 
 .main {
   width: 644px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   float: left; }
   .main__item {
     width: 161px;
     height: 161px;
-    background-color: #bc2a0a;
+    background: #bc2a0a;
     position: relative;
     float: left;
-    margin-right: 2px; }
+    margin-right: 2px;
+    -webkit-transition: background 300ms linear;
+    transition: background 300ms linear; }
     .main__item:hover {
-      background-color: #ffffff; }
+      background: #ffffff; }
       .main__item:hover > a {
         color: #bc2a0a;
         /*transform:rotate(-90deg);*/ }
@@ -139,6 +141,6 @@ h3 {
 .footer {
   float: right;
   width: 161px;
-  background-color: #ffffff; }
+  background: #ffffff; }
   .footer span {
     /*font-size:1.2rem;*/ }
