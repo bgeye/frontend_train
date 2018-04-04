@@ -11,6 +11,7 @@ $white_transp:#cccccc;
 $black:#000000;
 $red:#FF6347;//#bc2a0a;
 $lightblue:#6DE9FF;
+$whitesmoke:#F5F5F5;
 
 
 
@@ -304,16 +305,94 @@ h3{
     height:100%;
 }
 
+.head__mobile{
+    width:163px;
+    height:163px;
+    position:absolute;
+    left:0;
+    top:0;
+    background:$red;
+    display:none;
+    border:none;
+    outline:none;
+}
+
+
 .mobile{
     &__wrapper{
-        position:absolute;
-        left:-100%;
-        top:0;
-        background:$white;
         display:none;
+        position:absolute;
+        top:0;
+        width:200px;
+        //padding:10px;
+        font-size:1.2rem;
+        background:$white;
+        //display:none;
+        transform:translateX(-100%);
+        transition:all 300ms linear;
+        z-index: 3;
+
+        &.open{
+            transform:translateX(0);
+            //display:block;
+        }
+        & a{
+            color:black;
+        }
+    }
+    &__inner{
+        padding-top:30px;
+    }
+    &__close{
+        position:absolute;
+        top:0;
+        right:0;
+        width:30px;
+        height:30px;
+        padding-top:3px;
+        text-align: center;
+        text-transform: uppercase;
+        background:$red;
+        color:$white;
+        border:none;
+        outline:none;
+    }
+    &__title{
+        & > a{
+
+            font-weight: bold;
+            padding-left:6px;
+        }
+        & > ul{
+
+            margin-bottom: 5px;
+            & > li{
+                padding:8px 0;
+                cursor:pointer;
+                border-bottom:1px solid $whitesmoke;
+                &:hover{
+                    background:$red;
+                    color:$white;
+                    & a{
+                        color:$white;
+                    }
+                }
+
+            }
+        }
+    }
+    &__item{
+        & > a{
+            padding:0 5px;
+            &:hover{
+                //color:$white;
+            }
+        }
     }
 
 }
+
+
 
 @media(min-width:0px){
     max-width:978px;
@@ -322,12 +401,12 @@ h3{
 
 @media(max-width:978px){
 
-.mobile{
-    &__wrapper{
-        left:0;
-    }
+    .mobile{
+        &__wrapper{
+            display:block
+        }
 
-}
+    }
 
 
     .page-wrapper{
@@ -337,11 +416,14 @@ h3{
 
     .head{
         height:auto;
-        /*
+
         &__nav{
-                    display:none;
-                }
-        */
+            display:none;
+        }
+
+        &__mobile{
+            display:block;
+        }
     }
 
 
