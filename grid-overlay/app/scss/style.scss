@@ -136,6 +136,8 @@ h3{
     padding:5px;
     position:absolute;
     bottom:0;
+
+
     &__item{
         width:163px;
         height:163px;
@@ -143,6 +145,7 @@ h3{
         position:relative;
         float:left;
         margin-right:2px;
+        padding:5px;
         transition: background 300ms linear;
         &:hover{
             background: $white;
@@ -151,9 +154,13 @@ h3{
                 color: $red;
                 /*transform:rotate(-90deg);*/
             }
+
+            & > .main__sub{
+                display:block;
+            }
         }
 
-        a{
+        > a{
             color:$white;
             font-weight: 700;
             font-size:1.1rem;
@@ -162,6 +169,20 @@ h3{
             right:0;
             cursor: pointer;
             padding:5px;
+        }
+    }
+
+    &__sub{
+
+        display:none;
+
+
+        & a{
+           color:black;
+           &:hover{
+
+           color:$red;
+           }
         }
     }
 
@@ -283,12 +304,31 @@ h3{
     height:100%;
 }
 
+.mobile{
+    &__wrapper{
+        position:absolute;
+        left:-100%;
+        top:0;
+        background:$white;
+        display:none;
+    }
+
+}
+
 @media(min-width:0px){
     max-width:978px;
     width:100%;
 }
 
 @media(max-width:978px){
+
+.mobile{
+    &__wrapper{
+        left:0;
+    }
+
+}
+
 
     .page-wrapper{
         max-width:978px;
