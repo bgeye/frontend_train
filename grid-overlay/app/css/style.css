@@ -112,10 +112,17 @@ h3 {
       padding: 5px; }
   .main__sub {
     display: none; }
+    .main__sub > li {
+      padding: 5px 0;
+      border-bottom: 1px solid #F5F5F5; }
+      .main__sub > li:hover {
+        background: #FF6347; }
+      .main__sub > li:hover > a {
+        color: #ffffff; }
     .main__sub a {
-      color: black; }
-      .main__sub a:hover {
-        color: #FF6347; }
+      color: black;
+      font-size: 1.3rem;
+      padding: 0 5px; }
 
 .footer {
   position: relative;
@@ -140,23 +147,22 @@ h3 {
   .footer li {
     float: left; }
 
-.spacing {
+.space {
   float: left;
   width: 100%;
   padding: 2px 0; }
-
-.space-box {
-  display: block;
-  float: left;
-  height: auto;
-  position: relative;
-  width: 161px; }
-  .space-box::after {
-    content: "";
+  .space__box {
     display: block;
-    height: 0;
-    padding-bottom: 100%;
-    position: relative; }
+    float: left;
+    height: auto;
+    position: relative;
+    width: 161px; }
+    .space__box::after {
+      content: "";
+      display: block;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative; }
 
 .box {
   display: none;

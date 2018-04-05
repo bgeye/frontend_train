@@ -169,11 +169,20 @@ h3{
 
     &__sub{
         display:none;
+        & > li{
+            padding:5px 0;
+            border-bottom:1px solid $whitesmoke;
+            &:hover{
+                background:$red;
+            }
+            &:hover > a{
+                color:$white;
+            }
+        }
         & a{
            color:black;
-           &:hover{
-                color:$red;
-           }
+           font-size:1.3rem;
+           padding:0 5px;
         }
     }
 }
@@ -213,26 +222,27 @@ h3{
     }
 }
 
-.spacing{
+.space{
     float:left;
     width:100%;
     padding:2px 0;
-}
+    &__box{
 
-.space-box{
-    display:block;
-    float:left;
-    height:auto;
-    position:relative;
-    width:161px;
-    &::after{
-        content:"";
         display:block;
-        height:0;
-        padding-bottom:100%;
+        float:left;
+        height:auto;
         position:relative;
+        width:161px;
+        &::after{
+            content:"";
+            display:block;
+            height:0;
+            padding-bottom:100%;
+            position:relative;
+        }
     }
 }
+
 
 .box{
     display:none;
