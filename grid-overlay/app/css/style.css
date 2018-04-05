@@ -1,10 +1,4 @@
-/*
-           name: z-bau.ch
-    description: description
-         author: mario knecht
-           date: 2018mmdd
-*/
-/*$white_transp:rgba(255,255,255,0.5);*/
+/*---colors---*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 * {
   -webkit-box-sizing: border-box;
@@ -56,19 +50,21 @@ h3 {
 .page {
   position: relative;
   min-height: 100%; }
-
-.page-wrapper {
-  width: 978px;
-  margin: 0 auto;
-  z-index: 1;
-  padding-bottom: 80px; }
-  .page-wrapper::after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.page-inner {
-  position: relative; }
+  .page__wrapper {
+    width: 978px;
+    margin: 0 auto;
+    z-index: 1;
+    padding-bottom: 80px; }
+    .page__wrapper::after {
+      content: "";
+      display: table;
+      clear: both; }
+  .page__inner {
+    position: relative; }
+    .page__inner::after {
+      content: "";
+      display: table;
+      clear: both; }
 
 .head {
   width: 100%; }
@@ -82,11 +78,11 @@ h3 {
     clear: both; }
 
 .main {
+  position: absolute;
+  float: left;
   max-width: 815px;
   background: #cccccc;
-  float: left;
   padding: 5px;
-  position: absolute;
   bottom: 0; }
   .main__item {
     width: 163px;
@@ -121,46 +117,6 @@ h3 {
       .main__sub a:hover {
         color: #FF6347; }
 
-/*---grid---*/
-.grid {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  overflow: hidden; }
-
-.lines {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  color: white;
-  height: 2000px;
-  /*height:100%;*/
-  width: 3260px;
-  margin-left: -1630px;
-  overflow: hidden; }
-
-.vertical,
-.horizontal {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.vc__line {
-  display: inline-block;
-  width: 163px;
-  height: 100%;
-  border-right: 2px solid #cccccc; }
-
-.hz__line {
-  width: 100%;
-  height: 163px;
-  border-bottom: 2px solid #cccccc; }
-
 .footer {
   position: relative;
   float: right;
@@ -172,8 +128,6 @@ h3 {
     position: relative;
     padding-bottom: 2px;
     background: #ffffff; }
-  .footer span {
-    /*font-size:1.2rem;*/ }
   .footer__description, .footer__address {
     height: 163px;
     padding: 5px; }
@@ -208,6 +162,43 @@ h3 {
   display: none;
   width: 20%;
   height: 100%; }
+
+/*---grid---*/
+.grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  overflow: hidden; }
+  .grid__lines {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    color: white;
+    height: 2000px;
+    /*height:100%;*/
+    width: 3260px;
+    margin-left: -1630px;
+    overflow: hidden; }
+  .grid__vc, .grid__hz {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.line__hz {
+  width: 100%;
+  height: 163px;
+  border-bottom: 2px solid #cccccc; }
+
+.line__vc {
+  display: inline-block;
+  width: 163px;
+  height: 100%;
+  border-right: 2px solid #cccccc; }
 
 .head__mobile {
   width: 163px;
@@ -281,7 +272,7 @@ h3 {
 @media (max-width: 978px) {
   .mobile__wrapper {
     display: block; }
-  .page-wrapper {
+  .page__wrapper {
     max-width: 978px;
     width: 100%; }
   .head {
@@ -306,28 +297,27 @@ h3 {
     height: 100%;
     width: 100%;
     margin-left: 0; }
-  .lines {
-    left: 0;
-    top: 0;
-    color: white;
-    height: 2000px;
-    height: 100%;
-    width: 100%;
-    margin-left: 0;
-    overflow: hidden;
-    padding-right: 2px;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box; }
-  .vertical,
-  .horizontal {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .hz__line {
+    .grid__lines {
+      left: 0;
+      top: 0;
+      color: white;
+      height: 2000px;
+      height: 100%;
+      width: 100%;
+      margin-left: 0;
+      overflow: hidden;
+      padding-right: 2px;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box; }
+    .grid__vc, .grid__hz {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .line__hz {
     height: auto; }
-  .vc__line {
+  .line__vc {
     display: block;
     width: 20%;
     height: 100%;
