@@ -65,7 +65,15 @@ h3 {
   float: left;
   width: 161px;
   height: 161px;
-  background: #FF6347; }
+  background: #FF6347;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center; }
+  .logo > a {
+    color: #ffffff; }
 
 .main {
   position: absolute;
@@ -279,13 +287,13 @@ h3 {
   width: 100%; }
 
 /*Tablet*/
-@media (max-width: 768px) {
+@media (max-width: 978px) {
   .mobile__wrapper {
     display: block; }
   .mobile__title > a:hover {
     color: #FF6347; }
   .page__wrapper {
-    max-width: 768px;
+    min-width: 320px;
     width: 100%; }
   .head {
     height: auto; }

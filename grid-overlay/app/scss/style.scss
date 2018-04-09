@@ -101,11 +101,17 @@ h3{
 }
 
 .logo{
-
     float:left;
     width:161px;
     height:161px;
     background: $red;
+    //text-align:center;
+    display:grid;
+    justify-content:center;
+    align-content:center;
+    & > a{
+        color:$white;
+    }
 }
 
 .main{
@@ -385,7 +391,7 @@ h3{
 
 
 /*Tablet*/
-@media(max-width:768px){
+@media(max-width:978px){
     .mobile{
         &__wrapper{
             display:block
@@ -398,7 +404,7 @@ h3{
     }
 
     .page__wrapper{
-        max-width:768px;
+        min-width:320px;
         width:100%;
     }
 
@@ -478,6 +484,7 @@ h3{
 @media(max-width:480px){
     .mobile{
         &__wrapper{
+
             width:100%;
         }
     }
