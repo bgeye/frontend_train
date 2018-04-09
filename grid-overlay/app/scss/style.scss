@@ -70,6 +70,11 @@ h3{
 //    z-index:-1;
 //}
 
+.cf::after{
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .page{
     position:relative;
@@ -79,19 +84,9 @@ h3{
         margin:0 auto;
         z-index:1;
         padding-bottom:80px;
-        &::after{
-            content: "";
-            display: table;
-            clear: both;
-        }
     }
     &__inner{
          position:relative;
-         &::after{
-             content: "";
-             display: table;
-             clear: both;
-         }
          zoom: 1; /* For IE 6/7 (trigger hasLayout) */
      }
 }
@@ -102,13 +97,6 @@ h3{
         float:left;
         width:815px;
         height:161px;
-    }
-    &__main{
-        &::after{
-            content: "";
-            display: table;
-            clear: both;
-        }
     }
 }
 
@@ -164,7 +152,7 @@ h3{
     &__sub{
         display:none;
         & > li{
-            padding:5px 0;
+            padding:2px 0 4px 0;
             border-bottom:1px solid $whitesmoke;
             &:hover{
                 background:$red;
@@ -235,11 +223,6 @@ h3{
             position:relative;
         }
     }
-    &::after{
-        content: "";
-        display: table;
-        clear: both;
-    }
 }
 
 
@@ -294,17 +277,22 @@ h3{
 }
 
 
-.head__mobile{
-    width:163px;
-    height:163px;
-    position:absolute;
-    left:0;
-    top:0;
-    background:$red;
-    display:none;
-    border:none;
-    outline:none;
+.head{
+    &__mobile{
+        width:163px;
+        height:163px;
+        position:absolute;
+        left:0;
+        top:0;
+        background:$red;
+        display:none;
+        border:none;
+        outline:none;
+        cursor:pointer;
+    }
 }
+
+
 
 
 .mobile{
@@ -327,6 +315,14 @@ h3{
     }
     &__inner{
         padding-top:30px;
+        & .mobile{
+            &__title{
+                padding-bottom:5px;
+                &:last-child{
+                    padding-bottom:0;
+                }
+            }
+        }
     }
     &__close{
         position:absolute;
@@ -341,15 +337,23 @@ h3{
         color:$white;
         border:none;
         outline:none;
+        cursor:pointer;
     }
     &__title{
         & > a{
             font-weight: bold;
-            padding-left:6px;
+            padding-left:5px;
+            display:block;
         }
         & > ul{
 
             margin-bottom: 5px;
+            display:none;
+            transition:height 400ms linear;
+            &.open{
+                display:block;
+                height:100%;
+            }
             & > li{
                 padding:8px 0;
                 cursor:pointer;
@@ -379,15 +383,22 @@ h3{
     width:100%;
 }
 
-@media(max-width:978px){
+
+/*Tablet*/
+@media(max-width:768px){
     .mobile{
         &__wrapper{
             display:block
         }
+        &__title{
+            & > a:hover{
+                    color:$red;
+            }
+        }
     }
 
     .page__wrapper{
-        max-width:978px;
+        max-width:768px;
         width:100%;
     }
 
@@ -399,7 +410,12 @@ h3{
 
         &__mobile{
             display:block;
+
         }
+    }
+
+    .logo{
+        float:right;
     }
 
     .box{
@@ -455,3 +471,28 @@ h3{
         }
     }
 }
+
+
+
+/*smartphone*/
+@media(max-width:480px){
+    .mobile{
+        &__wrapper{
+            width:100%;
+        }
+    }
+
+    .head{
+        &__mobile{
+            width:63px;
+            height:63px;
+        }
+    }
+
+    .logo{
+        width:63px;
+        height:63px;
+    }
+
+}
+

@@ -36,16 +36,10 @@ h3 {
   font-size: 1.2rem;
   font-weight: bold; }
 
-.cf {
+.cf::after {
   content: "";
   display: table;
   clear: both; }
-
-.logo {
-  float: left;
-  width: 161px;
-  height: 161px;
-  background: #FF6347; }
 
 .page {
   position: relative;
@@ -55,16 +49,10 @@ h3 {
     margin: 0 auto;
     z-index: 1;
     padding-bottom: 80px; }
-    .page__wrapper::after {
-      content: "";
-      display: table;
-      clear: both; }
   .page__inner {
-    position: relative; }
-    .page__inner::after {
-      content: "";
-      display: table;
-      clear: both; }
+    position: relative;
+    zoom: 1;
+    /* For IE 6/7 (trigger hasLayout) */ }
 
 .head {
   width: 100%; }
@@ -72,10 +60,12 @@ h3 {
     float: left;
     width: 815px;
     height: 161px; }
-  .head__main::after {
-    content: "";
-    display: table;
-    clear: both; }
+
+.logo {
+  float: left;
+  width: 161px;
+  height: 161px;
+  background: #FF6347; }
 
 .main {
   position: absolute;
@@ -113,7 +103,7 @@ h3 {
   .main__sub {
     display: none; }
     .main__sub > li {
-      padding: 5px 0;
+      padding: 2px 0 4px 0;
       border-bottom: 1px solid #F5F5F5; }
       .main__sub > li:hover {
         background: #FF6347; }
@@ -215,7 +205,8 @@ h3 {
   background: #FF6347;
   display: none;
   border: none;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 .mobile__wrapper {
   display: none;
@@ -237,6 +228,10 @@ h3 {
 
 .mobile__inner {
   padding-top: 30px; }
+  .mobile__inner .mobile__title {
+    padding-bottom: 5px; }
+    .mobile__inner .mobile__title:last-child {
+      padding-bottom: 0; }
 
 .mobile__close {
   position: absolute;
@@ -250,14 +245,22 @@ h3 {
   background: #FF6347;
   color: #ffffff;
   border: none;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 .mobile__title > a {
   font-weight: bold;
-  padding-left: 6px; }
+  padding-left: 5px;
+  display: block; }
 
 .mobile__title > ul {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  display: none;
+  -webkit-transition: height 400ms linear;
+  transition: height 400ms linear; }
+  .mobile__title > ul.open {
+    display: block;
+    height: 100%; }
   .mobile__title > ul > li {
     padding: 8px 0;
     cursor: pointer;
@@ -275,11 +278,14 @@ h3 {
   max-width: 978px;
   width: 100%; }
 
-@media (max-width: 978px) {
+/*Tablet*/
+@media (max-width: 768px) {
   .mobile__wrapper {
     display: block; }
+  .mobile__title > a:hover {
+    color: #FF6347; }
   .page__wrapper {
-    max-width: 978px;
+    max-width: 768px;
     width: 100%; }
   .head {
     height: auto; }
@@ -287,6 +293,8 @@ h3 {
       display: none; }
     .head__mobile {
       display: block; }
+  .logo {
+    float: right; }
   .box {
     display: block; }
     .box::after {
@@ -328,3 +336,14 @@ h3 {
     width: 20%;
     height: 100%;
     float: left; } }
+
+/*smartphone*/
+@media (max-width: 480px) {
+  .mobile__wrapper {
+    width: 100%; }
+  .head__mobile {
+    width: 63px;
+    height: 63px; }
+  .logo {
+    width: 63px;
+    height: 63px; } }
