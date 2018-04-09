@@ -57,11 +57,6 @@ h3{
     font-weight: bold;
 }
 
-.cf{
-    content: "";
-    display: table;
-    clear: both;
-}
 
 //.background-image{
 //    background-image: url('../img/image.jpg');
@@ -75,16 +70,6 @@ h3{
 //    z-index:-1;
 //}
 
-
-
-.logo{
-
-    float:left;
-    width:161px;
-    height:161px;
-    background: $red;
-
-}
 
 .page{
     position:relative;
@@ -107,6 +92,7 @@ h3{
              display: table;
              clear: both;
          }
+         zoom: 1; /* For IE 6/7 (trigger hasLayout) */
      }
 }
 
@@ -124,6 +110,14 @@ h3{
             clear: both;
         }
     }
+}
+
+.logo{
+
+    float:left;
+    width:161px;
+    height:161px;
+    background: $red;
 }
 
 .main{
@@ -240,6 +234,11 @@ h3{
             padding-bottom:100%;
             position:relative;
         }
+    }
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
     }
 }
 
