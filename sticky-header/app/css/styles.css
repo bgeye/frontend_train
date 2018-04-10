@@ -1,0 +1,96 @@
+/*
+           name: sticky-header
+    description: frontend training sticky header, expand and shrink on scroll incl. responsive
+         author: mario knecht
+           date: 201804dd
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem; }
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold; }
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold; }
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: #FF69B4; }
+  a:hover {
+    color: #ffffff; }
+  a::after {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+
+.page__wrapper {
+  display: grid;
+  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
+
+.head {
+  grid-area: header;
+  padding: 5px;
+  background: lightgrey;
+  display: grid;
+  grid-template-column: 1fr 1fr 1fr;
+  grid-auto-flow: column; }
+
+.logo {
+  text-align: right; }
+
+.space {
+  text-align: center; }
+
+.burger {
+  height: 32px;
+  width: 50px;
+  display: grid;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  cursor: pointer; }
+
+.burger__item {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: tomato; }
+
+.main {
+  grid-area: main;
+  padding: 5px;
+  background: #ffffff; }
+
+.footer {
+  grid-area: footer;
+  padding: 5px;
+  background: lightgrey;
+  display: grid;
+  grid-auto-flow: column; }
+  .footer__nav > ul > li {
+    float: left;
+    margin-right: 10px; }
+    .footer__nav > ul > li a {
+      text-decoration: none; }
+  .footer__copyright {
+    text-align: center; }
+  .footer__search {
+    text-align: right; }
