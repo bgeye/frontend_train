@@ -31,7 +31,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #FF69B4; }
+  color: tomato; }
   a:hover {
     color: #ffffff; }
   a::after {
@@ -51,8 +51,7 @@ a {
   padding: 5px;
   background: lightgrey;
   display: grid;
-  grid-template-column: 1fr 1fr 1fr;
-  grid-auto-flow: column; }
+  grid-template-columns: 1fr 1fr 1fr; }
 
 .logo {
   text-align: right; }
@@ -67,12 +66,17 @@ a {
   -ms-flex-line-pack: justify;
   align-content: space-between;
   cursor: pointer; }
-
-.burger__item {
-  width: 100%;
-  height: 5px;
-  border-radius: 5px;
-  background-color: tomato; }
+  .burger__item {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: tomato; }
+  .burger__center {
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .burger__bottom {
+    -ms-flex-item-align: bottom;
+    align-self: bottom; }
 
 .main {
   grid-area: main;
@@ -82,9 +86,13 @@ a {
 .footer {
   grid-area: footer;
   padding: 5px;
+  font-size: 1rem;
   background: lightgrey;
   display: grid;
-  grid-auto-flow: column; }
+  grid-template-columns: 1fr 1fr 1fr; }
+  .footer > * {
+    -ms-flex-item-align: center;
+    align-self: center; }
   .footer__nav > ul > li {
     float: left;
     margin-right: 10px; }
