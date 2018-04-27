@@ -77,31 +77,35 @@ li{
     list-style: none;
 }
 
-
+.cf::after{
+    content: "";
+    display: table;
+    clear: both;
+}
 .challenge{
-    display:grid;
-    grid-template-rows: 1fr auto;
-    grid-template-areas:
-            "challenge__inner"
-            "footer";
-    min-height: 100%;
-    &__inner{
-        grid-area: challenge__inner;
-        display:grid;
-        grid-template-areas:
-        "header"
-        "main";
-        grid-template-rows:auto 1fr;
-    }
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    height:100%;
+}
+
+.page-row{
+    display:table-row;
+    height:1px;
+}
+
+.page-row-expanded{
+    height:100%;
 }
 
 .head{
-    grid-area: header;
     padding:5px;
     background: $lightgrey;
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    //grid-auto-flow:column;
+    &__col{
+        width:33.33%;
+        float:left;
+        padding:5px;
+    }
 }
 
 
@@ -139,21 +143,16 @@ li{
 }
 
 .main{
-    grid-area: main;
     padding:5px;
     background: $white;
 }
 
 
 .footer{
-    grid-area:footer;
     padding:5px;
     font-size: 1rem;
     background: $lightgrey;
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-row-start:2;
-    grid-row-end:3;
+
     & > *{
         align-self: center;
     }
@@ -173,6 +172,11 @@ li{
     }
     &__search{
         text-align:right;
+    }
+    &__col{
+        width:33.33%;
+        float:left;
+        padding:5px;
     }
 
 
