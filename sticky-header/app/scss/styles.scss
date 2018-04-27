@@ -68,6 +68,11 @@ a{
 
 }
 
+ul{
+    margin:0;
+    padding:0;
+}
+
 li{
     list-style: none;
 }
@@ -86,7 +91,7 @@ li{
         grid-template-areas:
         "header"
         "main";
-
+        grid-template-rows:auto 1fr;
     }
 }
 

@@ -45,6 +45,10 @@ a {
     overflow: hidden;
     visibility: hidden; }
 
+ul {
+  margin: 0;
+  padding: 0; }
+
 li {
   list-style: none; }
 
@@ -56,7 +60,8 @@ li {
   .challenge__inner {
     grid-area: challenge__inner;
     display: grid;
-    grid-template-areas: "header" "main"; }
+    grid-template-areas: "header" "main";
+    grid-template-rows: auto 1fr; }
 
 .head {
   grid-area: header;
