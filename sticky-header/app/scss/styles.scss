@@ -6,6 +6,9 @@
 */
 
 
+//TODO: why the reset css does not work? margin 0 as workaround currently set on body!!!
+
+
 $white: #ffffff;
 $lightgrey: lightgrey;
 $gainsboro: gainsboro;
@@ -22,12 +25,15 @@ $red: tomato;
 
 html{
     font-size:62.5%;
+    height:100%;
 }
 
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     font-size: 1.5rem;
+    height:100%;
+    margin:0;
 }
 
 h1{
@@ -62,12 +68,26 @@ a{
 
 }
 
-.page__wrapper{
-    display: grid;
+li{
+    list-style: none;
+}
+
+
+.challenge{
+    display:grid;
+    grid-template-rows: 1fr auto;
     grid-template-areas:
-    "header header header"
-    "main main main"
-    "footer footer footer";
+            "challenge__inner"
+            "footer";
+    min-height: 100%;
+    &__inner{
+        grid-area: challenge__inner;
+        display:grid;
+        grid-template-areas:
+        "header"
+        "main";
+
+    }
 }
 
 .head{
@@ -127,7 +147,8 @@ a{
     background: $lightgrey;
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
-    //grid-auto-flow:column;
+    grid-row-start:2;
+    grid-row-end:3;
     & > *{
         align-self: center;
     }
