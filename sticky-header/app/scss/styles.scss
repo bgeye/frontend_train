@@ -101,13 +101,33 @@ li{
     background: $lightgrey;
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
+    position:fixed;
+    width:100%;
+    top:0;
     //grid-auto-flow:column;
+    transition: all 0.4s ease-in-out;
 }
 
 
 .logo{
     text-align:right;
+    &__small{
+        display:none;
+    }
+    &__big{
+        height:100%;
+        transition:height 0.3s ease-in-out;
+    }
+    //transition:all 0.4s ease-in-out;
+}
 
+.shrink .logo__big{
+    height:50px;
+    //display:none;
+}
+
+.shrink .logo{
+    //max-height:100%;
 }
 
 .space{
@@ -142,6 +162,7 @@ li{
     grid-area: main;
     padding:5px;
     background: $white;
+    padding-top:187px;
 }
 
 
