@@ -1,0 +1,131 @@
+/*
+           name: sticky-header
+    description: frontend training sticky header, expand and shrink on scroll incl. responsive
+         author: mario knecht
+           date: 201804dd
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  height: 100%;
+  margin: 0; }
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold; }
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold; }
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: tomato; }
+  a:hover {
+    text-decoration: underline; }
+  a::after {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+.cf::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.challenge {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%; }
+
+.page-row {
+  display: table-row;
+  height: 1px; }
+
+.page-row-expanded {
+  height: 100%; }
+
+.head {
+  padding: 5px;
+  background: lightgrey; }
+  .head__col {
+    width: 33.33%;
+    float: left;
+    padding: 5px; }
+
+.logo {
+  text-align: right; }
+
+.space {
+  text-align: center; }
+
+.burger {
+  height: 32px;
+  width: 50px;
+  display: grid;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  cursor: pointer; }
+  .burger__item {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: tomato; }
+  .burger__center {
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .burger__bottom {
+    -ms-flex-item-align: bottom;
+    align-self: bottom; }
+
+.main {
+  padding: 5px;
+  background: #ffffff; }
+
+.footer {
+  padding: 5px;
+  font-size: 1rem;
+  background: lightgrey; }
+  .footer > * {
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .footer__nav > ul > li {
+    float: left;
+    margin-right: 10px; }
+    .footer__nav > ul > li a {
+      text-decoration: none; }
+      .footer__nav > ul > li a:hover {
+        text-decoration: underline; }
+  .footer__copyright {
+    text-align: center; }
+  .footer__search {
+    text-align: right; }
+  .footer__col {
+    width: 33.33%;
+    float: left;
+    padding: 5px; }
