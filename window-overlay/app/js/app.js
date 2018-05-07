@@ -8,6 +8,10 @@ var localData = t.checkLocalStorage(listKey);*/
 
 //init function
 var init = function(){
+    var challenge = document.querySelector('.challenge');
+
+    challenge.addEventListener('click',t.delegate('.infobox__show',showInfobox));
+    challenge.addEventListener('click',t.delegate('.infobox__btn',hideInfobox))
 
     window.addEventListener('scroll',headerScrolling);
 };
@@ -61,6 +65,16 @@ function setBigLogo() {
     var logoSmall = document.querySelector('.logo__small');
     logoBig.style.display = 'inline';
     logoSmall.style.display = 'none';
+}
+
+function showInfobox(e){
+    var overlay = document.querySelector('.main__overlay');
+    overlay.style.display = 'block';
+}
+
+function hideInfobox(e){
+    var overlay = document.querySelector('.main__overlay');
+    overlay.style.display = 'none';
 }
 
 

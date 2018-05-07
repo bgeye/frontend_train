@@ -114,6 +114,42 @@ li {
   padding: 5px;
   background: #ffffff;
   padding-top: 187px; }
+  .main__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: none; }
+
+.infobox__inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr; }
+
+.infobox__wrapper {
+  position: relative;
+  -ms-flex-item-align: center;
+  align-self: center;
+  justify-self: center;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  padding: 5px;
+  border: 1px dotted tomato; }
+
+.infobox__btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: none;
+  background-color: #ffffff;
+  border: none; }
 
 .footer {
   grid-area: footer;

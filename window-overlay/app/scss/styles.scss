@@ -10,6 +10,7 @@
 
 
 $white: #ffffff;
+$black: #000000;
 $lightgrey: lightgrey;
 $gainsboro: gainsboro;
 $gold: #FFD700;
@@ -163,6 +164,49 @@ li{
     padding:5px;
     background: $white;
     padding-top:187px;
+    &__overlay{
+        background-color: rgba(0,0,0,0.5);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        display: none;
+        //transition:opacity 0.4s ease-in;
+    }
+}
+
+.infobox{
+    &__inner{
+        position:relative;
+        height:100%;
+        width:100%;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    &__wrapper{
+
+        position:relative;
+        align-self: center;
+        justify-self:center;
+        width:300px;
+        height:200px;
+        text-align: center;
+        padding:5px;
+        border:1px dotted $red;
+    }
+    &__btn{
+        position:absolute;
+        right:5px;
+        top:5px;
+        background-color: none;
+        background-color:$white;
+        border:none;
+    }
+
+
 }
 
 
