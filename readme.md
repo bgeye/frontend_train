@@ -4,10 +4,10 @@ contains exercices with different topics
 
  * grid-overlay | grid as a design element
  * holy grail
-    ~~* sticky footer --grid~~
-    ~~* sticky footer --table cell~~
+    * ~~sticky footer --grid~~
+    * ~~sticky footer --table cell~~
     * sticky header ws(werbehof,immotega)
-    ~~* sticky header grid mario~~
+    * ~~sticky header grid mario~~
     * sticky header table cell -> clone ws?
  
  * navi
