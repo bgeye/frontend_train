@@ -4,10 +4,10 @@ contains exercices with different topics
 
  * grid-overlay | grid as a design element
  * holy grail
-    * DONE - sticky footer --grid
-    * DONE - sticky footer --table cell
+    ~~* sticky footer --grid~~
+    ~~* sticky footer --table cell~~
     * sticky header ws(werbehof,immotega)
-    * DONE - sticky header grid mario
+    ~~* sticky header grid mario~~
     * sticky header table cell -> clone ws?
  
  * navi
@@ -21,5 +21,5 @@ contains exercices with different topics
  * flip image to div with text
  * gallery with overlay(wesbos gallery?)
  * gallery ws -> margins
- * overlay on whole site
- * close overlay or menu when click outside in content of page(stop propagation)
+ * ~~overlay on whole site~~
+ * ~~close overlay or menu when click outside in content of page(stop propagation)~~
