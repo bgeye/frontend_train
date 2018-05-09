@@ -52,17 +52,6 @@ ul {
 li {
   list-style: none; }
 
-.challenge {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  grid-template-areas: "challenge__inner" "footer";
-  min-height: 100%; }
-  .challenge__inner {
-    grid-area: challenge__inner;
-    display: grid;
-    grid-template-areas: "header" "main";
-    grid-template-rows: auto 1fr; }
-
 .head {
   grid-area: header;
   padding: 5px;
@@ -124,6 +113,27 @@ li {
     z-index: 99;
     display: none; }
 
+.challenge {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "challenge__inner" "footer";
+  min-height: 100%; }
+  .challenge__inner {
+    grid-area: challenge__inner;
+    display: grid;
+    grid-template-areas: "header" "main";
+    grid-template-rows: auto 1fr; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5fr);
+  grid-template-rows: auto; }
+  .gallery__item {
+    background-image: url("img/mountain.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
 .infobox__inner {
   position: relative;
   height: 100%;
@@ -174,3 +184,10 @@ li {
     text-align: center; }
   .footer__search {
     text-align: right; }
+
+/*smartphone*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */

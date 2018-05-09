@@ -79,22 +79,7 @@ li{
 }
 
 
-.challenge{
-    display:grid;
-    grid-template-rows: 1fr auto;
-    grid-template-areas:
-            "challenge__inner"
-            "footer";
-    min-height: 100%;
-    &__inner{
-        grid-area: challenge__inner;
-        display:grid;
-        grid-template-areas:
-        "header"
-        "main";
-        grid-template-rows:auto 1fr;
-    }
-}
+
 
 .head{
     grid-area: header;
@@ -174,6 +159,35 @@ li{
         z-index: 99;
         display: none;
         //transition:opacity 0.4s ease-in;
+    }
+}
+
+.challenge{
+    display:grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+            "challenge__inner"
+            "footer";
+    min-height: 100%;
+    &__inner{
+        grid-area: challenge__inner;
+        display:grid;
+        grid-template-areas:
+                "header"
+                "main";
+        grid-template-rows:auto 1fr;
+    }
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns: ;
+    grid-template-rows: auto;
+    &__item{
+        background-image: url("img/mountain.jpg");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 

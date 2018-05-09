@@ -23,3 +23,7 @@ contains exercices with different topics
  * gallery ws -> margins
  * ~~overlay on whole site~~
  * ~~close overlay or menu when click outside in content of page(stop propagation)~~
+ 
+ 
+ ###typo3
+  * 8LTS
