@@ -37,6 +37,12 @@ body{
     margin:0;
 }
 
+img{
+    border:none;
+    max-width:100%;
+    height:auto;
+}
+
 h1{
     font-size: 1.8rem;
     font-weight: bold;
@@ -78,7 +84,11 @@ li{
     list-style: none;
 }
 
-
+.cf::after{
+    content: "";
+    display: table;
+    clear: both;
+}
 
 
 .head{
@@ -179,12 +189,20 @@ li{
     }
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns: ;
-    grid-template-rows: auto;
+.gallerysimple{
+    position:relative;
     &__item{
-        background-image: url("img/mountain.jpg");
+        float:left;
+    }
+
+}
+
+.gallery{
+
+
+
+    &__item{
+        background-image: url("img/hills.jpg");
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
