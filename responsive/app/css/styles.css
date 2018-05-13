@@ -150,11 +150,23 @@ li {
     padding-right: 3px;
     width: 25%; }
 
-.gallery__item {
-  background-image: url("img/hills.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+.gallery {
+  max-width: 800px;
+  margin: 0 auto; }
+  .gallery__container {
+    margin-left: -3px;
+    margin-right: -3px;
+    overflow: hidden; }
+  .gallery__item {
+    background-image: url("../img/hills.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    height: 200px;
+    width: 200px;
+    padding: 0 3px;
+    margin: 0 3px 6px 3px; }
 
 .infobox__inner {
   position: relative;
