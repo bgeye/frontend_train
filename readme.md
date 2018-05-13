@@ -25,5 +25,8 @@ contains exercices with different topics
  * ~~close overlay or menu when click outside in content of page(stop propagation)~~
  
  
- ###typo3
+###typo3
   * 8LTS
+  
+###DSGVO
+https://goo.gl/FPJStb
