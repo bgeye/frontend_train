@@ -297,49 +297,13 @@ li{
 /*smartphone*/
 //https://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
 
+/* Large Devices, Wide Screens */
+@media (max-width : 1200px) {
 
-
-/* Custom, iPhone Retina */
-@media (max-width: 320px) and (min-width: 1px){
-    .gallerysimple{
-
-
-        &__item{
-            width:100%;
-        }
-
-    }
 }
-
-/* Extra Small Devices, Phones */
-@media (max-width : 480px) and (min-width: 321px) {
-    .gallerysimple{
-
-
-        &__item{
-            width:50%;
-        }
-
-    }
-}
-
-/* Small Devices, Tablets */
-
-
-@media (max-width : 768px) and (min-width:481px) {
-    .gallerysimple{
-
-
-        &__item{
-            width:33%;
-        }
-
-    }
-}
-
 
 /* Medium Devices, Desktops */
-@media (max-width : 992px) and (min-width:769px) {
+@media screen and (max-width : 992px) /*and (min-width:769px) */{
     .gallerysimple{
 
 
@@ -350,9 +314,79 @@ li{
     }
 }
 
-/* Large Devices, Wide Screens */
-@media (max-width : 1200px) {
+
+
+
+
+/* Small Devices, Tablets */
+
+
+@media screen and (max-width : 768px) /*and (min-width:481px)*/{
+    .gallerysimple{
+
+
+        &__item{
+            width:33%;
+        }
+
+    }
+
+
+
 
 }
+
+@media screen and (max-width : 520px){
+
+
+    .footer{
+        grid-template-columns: 1fr;
+        &__copyright{
+            order:3;
+        }
+        &__search{
+            text-align:center;
+        }
+        &__nav{
+            max-width: 100px;
+            margin:0 auto;
+        }
+    }
+
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width : 480px) /*and (min-width: 321px)*/ {
+    .gallerysimple{
+
+
+        &__item{
+            width:50%;
+        }
+
+    }
+
+}
+
+/* Custom, iPhone Retina */
+@media screen and (max-width: 320px) /*and (min-width: 1px)*/{
+    .gallerysimple{
+
+
+        &__item{
+            width:100%;
+        }
+
+    }
+}
+
+
+
+
+
+
+
 
 
