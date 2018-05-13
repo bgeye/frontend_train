@@ -122,6 +122,8 @@ li {
     top: 0;
     z-index: 99;
     display: none; }
+  .main__inner {
+    position: relative; }
 
 .challenge {
   display: grid;
@@ -135,9 +137,18 @@ li {
     grid-template-rows: auto 1fr; }
 
 .gallerysimple {
-  position: relative; }
+  position: relative;
+  max-width: 992px;
+  margin: 0 auto; }
+  .gallerysimple__container {
+    margin-left: -3px;
+    margin-right: -3px;
+    overflow: hidden; }
   .gallerysimple__item {
-    float: left; }
+    float: left;
+    padding-left: 3px;
+    padding-right: 3px;
+    width: 25%; }
 
 .gallery__item {
   background-image: url("img/hills.jpg");
@@ -198,7 +209,23 @@ li {
 
 /*smartphone*/
 /* Custom, iPhone Retina */
+@media (max-width: 320px) and (min-width: 1px) {
+  .gallerysimple__item {
+    width: 100%; } }
+
 /* Extra Small Devices, Phones */
+@media (max-width: 480px) and (min-width: 321px) {
+  .gallerysimple__item {
+    width: 50%; } }
+
 /* Small Devices, Tablets */
+@media (max-width: 768px) and (min-width: 481px) {
+  .gallerysimple__item {
+    width: 33%; } }
+
 /* Medium Devices, Desktops */
+@media (max-width: 992px) and (min-width: 769px) {
+  .gallerysimple__item {
+    width: 25%; } }
+
 /* Large Devices, Wide Screens */
