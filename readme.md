@@ -19,7 +19,7 @@ contains exercices with different topics
     * ~~footer -> 3 div in row, then in column~~~
     * footer no grid but floating columns then 100%(no problem:-))
  * image, title, text all same height -> flexbox, grid or alternate(fb frigel)
- * flip image to div with text
+ * ~~flip image to div with text~~
  * gallery with overlay(wesbos gallery?)
  * ~~gallery ws -> margins~~
  * ~~overlay on whole site~~
@@ -37,4 +37,4 @@ https://goo.gl/FPJStb
 ####responsive
  * background-images gallery how to center this container and how to zoom outzoom
  in case of responsive smaller and bigger screens like normal use of images in html?
-
+ * sticky header clone -> only if height is lost(I guess:-)
