@@ -31,3 +31,10 @@ contains exercices with different topics
   
 ###DSGVO
 https://goo.gl/FPJStb
+
+
+###questions
+####responsive
+ * background-images gallery how to center this container and how to zoom outzoom
+ in case of responsive smaller and bigger screens like normal use of images in html?
+
