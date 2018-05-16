@@ -1,0 +1,99 @@
+/*
+           name: sticky-header
+    description: frontend training sticky header, expand and shrink on scroll incl. responsive
+         author: mario knecht
+           date: 201804dd
+*/
+
+
+//TODO: why the reset css does not work? margin 0 as workaround currently set on body!!!
+
+
+$white: #ffffff;
+$black: #000000;
+$lightgrey: lightgrey;
+$gainsboro: gainsboro;
+$gold: #FFD700;
+$hotpink: #FF69B4;
+$red: tomato;
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    font-size:62.5%;
+    height:100%;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-size: 1.5rem;
+    height:100%;
+    margin:0;
+}
+
+h1{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+a{
+    text-decoration:none;
+    color:$red;
+    &:hover{
+       text-decoration:underline;
+    }
+    &::after {
+    	display: block;
+    	content: attr(title);
+    	font-weight: bold;
+    	height: 0;
+    	overflow: hidden;
+    	visibility: hidden;
+    }
+
+}
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+li{
+    list-style: none;
+}
+
+
+.container{
+    position:relative;
+    height:100%;
+    width:100%;
+}
+
+.infobox{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    display:block;
+    width:300px;
+    height:200px;
+    border:1px dotted $red;
+}
