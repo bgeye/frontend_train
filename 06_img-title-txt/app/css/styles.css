@@ -154,11 +154,15 @@ li {
 
 .info {
   display: grid;
-  grid-template-rows: minmax(1fr, 200px);
+  grid-auto-rows: 200px;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 5px; }
   .info__card {
-    background-color: lightgrey; }
+    background-color: lightgrey;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .info__card:nth-child(n+2) {
+    padding: 0 5px; }
 
 .infobox__inner {
   position: relative;
