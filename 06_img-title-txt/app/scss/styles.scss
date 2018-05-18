@@ -234,6 +234,26 @@ li{
     }
 }
 
+.news{
+    display:flex;
+    //flex-flow: wrap;
+    flex-flow: row;
+    &__card{
+        display:flex;
+        flex-flow: column;
+        flex:0 1 200px;//auto;
+        & > img{
+            flex:0 1 auto;
+        }
+        & > p{
+            flex:1 1 auto;
+        }
+        & > h4{
+            flex:0 1 auto;
+        }
+    }
+}
+
 .infobox{
     &__inner{
         position:relative;

@@ -164,6 +164,28 @@ li {
   .info__card:nth-child(n+2) {
     padding: 0 5px; }
 
+.news {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+  flex-flow: row; }
+  .news__card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -ms-flex: 0 1 200px;
+    flex: 0 1 200px; }
+    .news__card > img {
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto; }
+    .news__card > p {
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
+    .news__card > h4 {
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto; }
+
 .infobox__inner {
   position: relative;
   height: 100%;
