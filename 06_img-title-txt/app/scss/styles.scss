@@ -183,6 +183,10 @@ li{
         display: none;
         //transition:opacity 0.4s ease-in;
     }
+    &__news{
+        width:100%;
+    }
+
 }
 
 .flip{
@@ -237,11 +241,15 @@ li{
 .news{
     display:flex;
     //flex-flow: wrap;
-    flex-flow: row;
+    flex-flow: row wrap;
+    margin:0 auto;
+    max-width: 1240px;
     &__card{
         display:flex;
         flex-flow: column;
-        flex:0 1 200px;//auto;
+        flex:0 1 25%;//auto;
+        //max-width: 300px;
+        padding:0 5px;
         & > img{
             flex:0 1 auto;
         }
@@ -317,5 +325,63 @@ li{
         text-align:right;
     }
 
+
+}
+
+/*smartphone*/
+//https://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
+
+/* Large Devices, Wide Screens */
+@media (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media screen and (max-width : 992px) /*and (min-width:769px) */{
+
+}
+
+
+
+
+
+/* Small Devices, Tablets */
+
+
+@media screen and (max-width : 768px) /*and (min-width:481px)*/{
+    .news{
+        display:flex;
+        &__card{
+            flex:0 1 33.33%;
+            padding:0 5px;
+        }
+    }
+}
+
+@media screen and (max-width : 520px){
+
+    .news{
+        display:flex;
+        &__card{
+            flex:0 1 50%;
+            padding:0 5px;
+        }
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width : 480px) /*and (min-width: 321px)*/ {
+    .news{
+        display:flex;
+        &__card{
+            flex:0 1 100%;
+            padding:0 5px;
+        }
+    }
+}
+
+/* Custom, iPhone Retina */
+@media screen and (max-width: 320px) /*and (min-width: 1px)*/{
 
 }
